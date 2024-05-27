@@ -5,9 +5,9 @@ name: quilibrium
 
 services:
   node:
-          #image: ${QUILIBRIUM_IMAGE_NAME:-quilibrium}
     image: leveleven/ceremony
     restart: unless-stopped
+    command: ["--signature-check=false"]
     deploy:
       resources:
         limits:
